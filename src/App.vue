@@ -1,5 +1,5 @@
 <script>
-import ProjectLits from "./components/projects/ProjectList.vue";
+import ProjectList from "./components/projects/ProjectList.vue";
 
 export default {
   data() {
@@ -7,13 +7,13 @@ export default {
   },
 
   components: {
-    ProjectLits,
+    ProjectList,
   },
 };
 </script>
 
 <template>
-  <ProjectLits />
+  <ProjectList />
 </template>
 
 <style lang="scss" scoped></style>
