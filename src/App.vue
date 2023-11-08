@@ -1,5 +1,5 @@
 <script>
-import ProjectList from "./components/projects/ProjectList.vue";
+import Navbar from "./components/ui/Navbar.vue";
 
 export default {
   data() {
@@ -7,13 +7,14 @@ export default {
   },
 
   components: {
-    ProjectList,
+    Navbar,
   },
 };
 </script>
 
 <template>
-  <ProjectList />
+  <Navbar />
+  <router-view></router-view>
 </template>
 
 <style lang="scss" scoped></style>
