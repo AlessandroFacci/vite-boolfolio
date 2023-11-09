@@ -34,7 +34,11 @@ export default {
   <div class="container mt-5">
     <h1>{{ title }}</h1>
     <div class="row row-cols-3 g-3 mt-3">
-      <ProjectCard :projects="projects" />
+      <ProjectCard
+        v-for="project in projects"
+        :isDetail="false"
+        :project="project"
+      />
     </div>
   </div>
 </template>

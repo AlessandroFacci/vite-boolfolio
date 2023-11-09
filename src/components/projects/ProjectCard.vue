@@ -5,13 +5,14 @@ export default {
   },
 
   props: {
-    projects: Array,
+    project: Object,
+    isDetail: Boolean,
   },
 };
 </script>
 
 <template>
-  <div class="col" v-for="project in projects">
+  <div class="col">
     <div class="card">
       <div class="card-header">
         <h5>{{ project.title }}</h5>
@@ -27,6 +28,13 @@ export default {
           <li><strong>Description:</strong> {{ project.description }}</li>
         </ul>
       </div>
+      <div class="card-footer" v-if="!isDetail">
+        <router-link
+          class="btn btn-primary"
+          :to="{ name: 'project-detail', params: { id: project.id } }"
+          >Show</router-link
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +42,7 @@ export default {
 <style lang="scss" scoped>
 .card {
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 ul {
   list-style-type: none;

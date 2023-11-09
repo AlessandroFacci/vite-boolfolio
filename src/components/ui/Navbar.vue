@@ -23,7 +23,7 @@ export default {};
         <ul class="navbar-nav">
           <li class="nav-item">
             <router-link
-              class="nav-link active"
+              class="nav-link"
               aria-current="page"
               :to="{ name: 'homepage' }"
               >Home</router-link
@@ -31,7 +31,7 @@ export default {};
           </li>
           <li class="nav-item">
             <router-link
-              class="nav-link active"
+              class="nav-link"
               aria-current="page"
               :to="{ name: 'portfolio' }"
               >Portfolio</router-link
