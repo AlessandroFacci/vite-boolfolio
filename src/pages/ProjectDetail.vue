@@ -26,7 +26,7 @@ export default {
 
 <template>
   <div class="container">
-    <h1>Project detail</h1>
+    <h1 class="my-5">Project detail</h1>
     <ProjectCard :project="project" :isDetail="true" v-if="project" />
   </div>
 </template>

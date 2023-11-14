@@ -18,6 +18,7 @@ export default {
 
   methods: {
     fetchProjects(uri = store.api.baseUrl + "projects") {
+      console.log((uri = store.api.baseUrl + "projects"));
       axios.get(uri).then((response) => {
         this.projects = response.data;
       });

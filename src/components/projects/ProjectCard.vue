@@ -20,7 +20,18 @@ export default {
       <div class="card-body">
         <ul>
           <li><strong>Id:</strong> {{ project.id }}</li>
-          <li><strong>Type Id:</strong> {{ project.type_id }}</li>
+          <li>
+            <strong>Type Id:</strong>
+            <router-link
+              :to="{
+                name: 'project-type',
+                params: {
+                  type_id: project.type_id,
+                },
+              }"
+              >{{ project.type_id }}</router-link
+            >
+          </li>
           <li><strong>Slug:</strong> {{ project.slug }}</li>
           <li><strong>Repo:</strong> {{ project.repo }}</li>
           <li><strong>Created at:</strong> {{ project.created_at }}</li>
